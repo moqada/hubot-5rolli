@@ -7,7 +7,7 @@
 [![DevDependency Status][daviddm-dev-image]][daviddm-dev-url]
 [![License][license-image]][license-url]
 
-5ROLLI [5ROLLI](https://github.com/tongariboyz/5rolli) for Hubot
+[5ROLLI](https://github.com/tongariboyz/5rolli) for Hubot
 
 ## Installation
 

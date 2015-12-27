@@ -14,6 +14,6 @@ describe '5rolli', ->
   it 'help', ->
     helps = room.robot.helpCommands()
     assert.deepEqual helps, [
-      'hubot 5rolli <URL> - List Summary of project'
-      'hubot 5rolli info [project] <URL> - List Detail of project'
+      'hubot 5rolli - List Summary of project'
+      'hubot 5rolli info [project] - List Detail of project'
     ]

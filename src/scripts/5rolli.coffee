@@ -2,8 +2,8 @@
 #   Listing SINCHOKU summary of 5ROLLI projects.
 #
 # Commands:
-#   hubot 5rolli <URL> - List Summary of project
-#   hubot 5rolli info [project] <URL> - List Detail of project
+#   hubot 5rolli - List Summary of project
+#   hubot 5rolli info [project] - List Detail of project
 #
 # Configuration:
 #   HUBOT_5ROLLI_PROJECTS - Set projects info by JSON string

@@ -27,8 +27,8 @@ Then add **hubot-5rolli** to your `external-scripts.json`:
 ## Commands
 
 ```
-hubot 5rolli <URL> - List Summary of project
-hubot 5rolli info [project] <URL> - List Detail of project
+hubot 5rolli - List Summary of project
+hubot 5rolli info [project] - List Detail of project
 ```
 
 ## Configurations

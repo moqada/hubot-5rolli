@@ -47,9 +47,9 @@ renderDetailInfo = (detailInfo, hoursOfDay, people) ->
   - #{closeRow(close.spent)}
 
   ### 完了タスク消化ペース
-  - 予想: #{summarize.calcPace(close.spent, close.es)} %
-  - 最速: #{summarize.calcPace(close.spent, close.es50)} %
-  - 最悪: #{summarize.calcPace(close.spent, close.es90)} %
+  - 予想: #{summarize.calcPace(close.spent, close.es)}%
+  - 最速: #{summarize.calcPace(close.spent, close.es50)}%
+  - 最悪: #{summarize.calcPace(close.spent, close.es90)}%
   """
 
 module.exports =

@@ -6,7 +6,7 @@ renderOpenRow = (min, hoursOfDay, people) ->
   wd = summarize.calcWorkDays(min, hoursOfDay)
   ld = summarize.calcLeftDays(wd, people)
   to = moment(summarize.calcFinishDate(ld)).format('YYYY/MM/DD')
-  "#{ld} days (#{wd} days/p, to: #{to})"
+  "#{ld} days (#{wd} days/people, to: #{to})"
 
 
 renderSummaryInfo = (summaryInfo, hoursOfDay, people) ->
@@ -17,7 +17,7 @@ renderSummaryInfo = (summaryInfo, hoursOfDay, people) ->
     wd = summarize.calcWorkDays(summary.spent, hoursOfDay)
     ld = summarize.calcLeftDays(wd, people)
     pace = summarize.calcPace(summary.spent, summary.es)
-    st = "#{ld} days (#{wd} days/p, es: #{pace}%)"
+    st = "#{ld} days (#{wd} days/people, es: #{pace}%)"
 
   """
   - 残り: #{renderOpenRow(open.es, hoursOfDay, people)}
@@ -35,7 +35,7 @@ renderDetailInfo = (detailInfo, hoursOfDay, people) ->
   closeRow = (min) ->
     wd = summarize.calcWorkDays(min, hoursOfDay)
     ld = summarize.calcLeftDays(wd, people)
-    st = "#{ld} days (#{wd} days/p)"
+    st = "#{ld} days (#{wd} days/people)"
 
   """
   ### タスク残り時間 (#{hoursOfDay}時間/日, #{people}人換算)

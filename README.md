@@ -23,6 +23,41 @@ Then add **hubot-5rolli** to your `external-scripts.json`:
 
 ## Sample Interaction
 
+```
+user> @hubot 5rolli
+Hubot>
+## test-project
+- 残り: 29.5 days (38.4 days/people, to: 2016/03/06)
+- 消化: 31.2 days (40.6 days/people, es: 247%)
+
+user> @hubot 5rolli info test-project
+hubot>
+## test-project
+
+### タスク残り時間 (5時間/日, 1.3人換算)
+- 予想: 29.5 days (38.4 days/people, to: 2016/03/06)
+- 最速: 21 days (27.4 days/people, to: 2016/02/28)
+- 最悪: 65.4 days (85.1 days/people, to: 2016/05/01)
+
+### 完了タスク消化時間
+- 31.2 days (40.6 days/people)
+
+### タスク消化率
+- 予想: 31.4%
+- 最速: 32.7%
+- 最悪: 25.9%
+
+### 完了タスク消化ペース
+- 予想: 247%
+- 最速: 303%
+- 最悪: 136%
+
+### 初回終了予想日 (開始日: 2015/11/27)
+- 予想: 2016/01/31 (diff: 35 days)
+- 最速: 2016/01/17 (diff: 42 days)
+- 最悪: 2016/04/03 (diff: 28 days)
+```
+
 
 ## Commands
 

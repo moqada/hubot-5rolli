@@ -43,7 +43,7 @@ module.exports = (robot) ->
         .then (summary) ->
           """
           ## #{project.name}
-          #{renderFunc(summary, WORK_HOURS, project.people)}
+          #{renderFunc(summary, WORK_HOURS, project.people, project)}
           """
     Promise.all(promises).then (results) ->
       res.send results.join('\n\n')

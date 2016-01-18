@@ -13,8 +13,9 @@ calcWorkDays = (minutes, hoursOfDay) ->
 calcLeftDays = (days, people) ->
   parseInt(10 * days / people, 10) / 10
 
-calcFinishDate = (days) ->
-  moment().add(Math.ceil(days / 5), 'weeks').endOf('isoweek').toDate()
+calcFinishDate = (days, startDate) ->
+  startDate = startDate or new Date()
+  moment(startDate).add(Math.ceil(days / 5), 'weeks').endOf('isoweek').toDate()
 
 minToHours = (minutes) ->
   hours = moment.duration(minutes, 'minutes').asHours()
@@ -27,6 +28,9 @@ getSummaryInfo = (stories) ->
   opens = (s for s in stories when s.status in ['open', 'waiting'])
   closes = (s for s in stories when s.status is 'close')
   return {
+    all:
+      summary: storiesToSummary(stories)
+      stories: stories
     open:
       summary: storiesToSummary(opens)
       stories: opens
@@ -54,6 +58,10 @@ getStoriesPerLists = (stories) ->
     }
   .sort (a, b) -> a.sprint.due - b.sprint.due
 
+
+getStartDate = (sprint, period) ->
+  moment(sprint.due).subtract(period, 'd').toDate()
+
 fetchStories = (token, key, boardId) ->
   client = new StoryClient(token, key, boardId)
   client.getStories().then (stories) -> stories.filter (s) -> s.type is 'story'
@@ -68,3 +76,4 @@ module.exports =
   calcPace: calcPace
   calcLeftDays: calcLeftDays
   calcWorkDays: calcWorkDays
+  getStartDate: getStartDate

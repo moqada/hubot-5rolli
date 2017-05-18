@@ -1,5 +1,7 @@
 # hubot-5rolli
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/moqada/hubot-5rolli.svg)](https://greenkeeper.io/)
+
 [![NPM version][npm-image]][npm-url]
 [![NPM downloads][npm-download-image]][npm-download-url]
 [![Build Status][travis-image]][travis-url]
